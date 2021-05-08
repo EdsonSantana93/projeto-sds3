@@ -12,12 +12,11 @@ import com.edsoncorp.dsvendas.repositories.SellerRepository;
 
 @Service
 public class SellerService {
-	
+
 	@Autowired
 	private SellerRepository repository;
-	
-	
-	public List<SellerDTO> findAll(){
+
+	public List<SellerDTO> findAll() {
 		List<Seller> sellers = (List<Seller>) repository.findAll();
 		return sellers.stream().map(x -> new SellerDTO(x)).collect(Collectors.toList());
 	}
