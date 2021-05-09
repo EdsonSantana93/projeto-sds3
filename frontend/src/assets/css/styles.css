@@ -30,3 +30,8 @@ html, body {
 .text-primary {
     color: var(--color-primary) !important;
 }
+
+#home{
+    min-height:340px;
+    margin-top: 124px;
+}
